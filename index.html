@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <link rel="stylesheet" type="text/css" href="passgen.css">
-    <script src="passgen.js" defer></script>
 </head>
 <body>
     <div class="container" id="passgenform">
@@ -26,8 +25,8 @@
                             <input type="checkbox" id="includeUpper" checked>
                         </li>
                         <li>
-                            <label for="includeNuber">Numbers</label>
-                            <input type="checkbox" id="includeNuber" checked>
+                            <label for="includeNumber">Numbers</label>
+                            <input type="checkbox" id="includeNumber" checked>
                         </li>
                         <li>
                             <label for="includeSymbol">Symbols</label>
@@ -40,6 +39,16 @@
                     </ul>
             </div>
         </form>
+
+        <div id="genBtn">
+            <input type="submit" value="Generate" id="generateButton">
+            <input type="button" value="Copy" id="copybutton" onclick="doCopy();">
+             Password :
+            <span id="password"></span>
+        </div>
+
     </div>
+
+    <script src="passgen.js" defer></script>
 </body>
 </html>

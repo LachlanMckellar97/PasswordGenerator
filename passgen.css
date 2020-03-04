@@ -28,7 +28,18 @@ ul {
 
 form {
     background-color: rgb(152, 165, 139);
-    color: rgb(243, 241, 235);
+    color: honeydew;
     border: solid 2px rgb(88, 54, 54);
     border-radius: 0.5rem;
+}
+
+#genBtn {
+    color: honeydew;
+    background-color: rgb(91, 102, 91);
+    padding: 15px;
+    word-break: break-all;
+    border: solid 2px rgb(88, 54, 54);
+    border-radius: 0.5rem;
+    margin-top: 10px;
+    display: block;
 }
