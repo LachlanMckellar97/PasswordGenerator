@@ -60,10 +60,15 @@ function generatePassword(lower, upper, number, symbol, length) {
     (item => Object.values(item)[0]);
 
     if(typesCount === 0) {
-        return " ";
+        alert("Please select at least one character type");
+        return;
+    }
+
+    else if(length > 128 || length < 8) {
+        alert("Please select a number from 8 to 128");
+        return;
     }
     
-
     for(let i = 0; i < length; i += typesCount) {
         typesArr.forEach(type => {
            var funcName = Object.keys(type)[0];

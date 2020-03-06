@@ -16,19 +16,19 @@
             <div class="characterset">
                 <h3>Password Options</h3>
                     <ul>
-                        <li> 
+                        <li class="checkbox"> 
                             <label for="includeLower">Lowercase</label>
                             <input type="checkbox" id="includeLower" checked>
                         </li>
-                        <li>
+                        <li class="checkbox">
                             <label for="includeUpper">Uppercase</label>
                             <input type="checkbox" id="includeUpper" checked>
                         </li>
-                        <li>
+                        <li class="checkbox">
                             <label for="includeNumber">Numbers</label>
                             <input type="checkbox" id="includeNumber" checked>
                         </li>
-                        <li>
+                        <li class="checkbox">
                             <label for="includeSymbol">Symbols</label>
                             <input type="checkbox" id="includeSymbol" checked>
                         </li>
@@ -42,7 +42,7 @@
 
         <div id="genBtn">
             <input type="submit" value="Generate" id="generateButton">
-            <input type="button" value="Copy" id="copybutton" onclick="doCopy();">
+            <input type="button" value="Copy" id="copybutton">
              Password :
             <span id="password"></span>
         </div>

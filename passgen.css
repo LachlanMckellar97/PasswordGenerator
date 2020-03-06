@@ -1,3 +1,4 @@
+/* Pages main style */
 body {
     background-color: rgb(248, 233, 215);
     font-family: 'Times New Roman', Times, serif;
@@ -42,4 +43,18 @@ form {
     border-radius: 0.5rem;
     margin-top: 10px;
     display: block;
+}
+
+/* Responsive design */
+@media screen and (max-width: 800px) {
+    * {
+        width: auto;
+        padding: 7px;
+        margin: auto;
+        font-size: 8vw;
+        
+    }
+    #passgenform {
+        border: none;
+    }
 }
