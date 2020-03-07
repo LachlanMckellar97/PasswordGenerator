@@ -61,12 +61,12 @@ function generatePassword(lower, upper, number, symbol, length) {
 
     if(typesCount === 0) {
         alert("Please select at least one character type");
-        return;
+        return " ";
     }
 
     else if(length > 128 || length < 8) {
         alert("Please select a number from 8 to 128");
-        return;
+        return " ";
     }
     
     for(let i = 0; i < length; i += typesCount) {
@@ -76,7 +76,7 @@ function generatePassword(lower, upper, number, symbol, length) {
         })
     }
 
-    var finalPassword = generatedPassword.slice(0, length);
+    var finalPassword = (shuffle(generatedPassword.slice(0, length)));
 
     return finalPassword;
 }
@@ -95,4 +95,16 @@ function getRandomNumber() {
 function getRandomSymbol() {
 	var symbols = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 	return symbols[Math.floor(Math.random() * symbols.length)];
+}
+
+//shuffle
+function shuffle(string) {
+    var parts = string.split('');
+    for (var i = parts.length; i > 0;) {
+        var random = parseInt(Math.random() * i);
+        var temp = parts[--i];
+        parts[i] = parts[random];
+        parts[random] = temp;
+    }
+    return parts.join('');
 }
